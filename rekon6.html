@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rekonstech task_1 </title>
+</head>
+
+
+<style>
+    /* Media Queries */
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 767px) {
+    h1, h2, h3, h4, h5, h6 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    p, ul, ol {
+        font-size: 30px;
+        padding-left: 10%;
+    }
+}
+
+/* For screens between 768px and 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h1, h2, h3, h4, h5, h6 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    p, ul, ol {
+        font-size: 35px;
+        padding-left: 15%;
+    }
+}
+
+/* For screens larger than 1023px */
+@media screen and (min-width: 1024px) {
+    /* Keep the base styles */
+}
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 45px;
+        list-style: none;
+        background: linear-gradient(#00a, #00a3b0);
+        border-radius: 0.5%;
+        margin-left: 15rem;
+        margin-top: 15px;
+        padding-top: 14px;
+        margin-right: 15rem; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    p {
+        margin: 12px;
+        font-size: 45px;
+        color: whitesmoke;
+        font-weight: 600;
+    }
+
+    ul, ol {
+        color: darkgreen;
+        font-weight: 600;
+        font-size: 45px;
+        padding-left: 19rem;
+    }
+</style>
+<body>
+    
+    <h1 id="mainHeading"> It is a start of the journey as a Web Development Intern at the RekonStech </h1> <br>
+    <h2> First we will discuss about what is a web development and then we will precisely go through each skills part included under it... </h2> <br>
+    <h3> We describes the Web Development as the process of creating website applicatons, making it responsive and side by side handling its integration with the Back End technologies...</h3> <br>
+    <h4> As a web developer intern we will work on the Html, Css and JavaScript also its frameworks like React Js, Angular Js, Node Js.</h4> <br>
+    <h5> Html is a main structure of the website, without it the website application is nothing but a text document.</h5> <br>
+    <h6> Css is used to style the Html document. Javascript is used to make it alive and apply the dynamic feature to it.. </h6> <br>
+
+    <hr> 
+
+    <p> It is a start of the journey as a Web Development Intern at the RekonStech. First we will discuss about what is a web development and then we will precisely go through each skills part included under it... 
+    We describes the Web Development as the process of creating website applicatons, making it responsive and side by side handling its integration with the Back End technologies. 
+    As a web developer intern we will work on the Html, Css and JavaScript also its frameworks like React Js, Angular Js, Node Js. Html is a main structure of the website, without it the website application is nothing but a text document. Css is used to style the Html document. Javascript is used to make it alive and apply the dynamic feature to it..</p>
+
+    <hr>
+    
+    <ul>
+        <li> Html </li>
+        <li> Css </li>
+        <li> JavaScript </li>
+        <li> Node js </li>
+        <li> Angular Js </li>
+    </ul>
+
+    <ol>
+        <li> Python </li>
+        <li> Java </li>
+        <li> Ruby </li>
+        <li> Node Js </li>
+        <li> Mern stack </li>
+    </ol>
+
+    <hr>
+
+    <p> Html Videos :- <a href="https://www.w3schools.com/html/html5_video.asp">https://www.w3schools.com/html/html5_video.asp</a></p>
+    <p> CSS videos :- <a href="https://www.freecodecamp.org/news/learn-css-in-this-free-6-hour-video-course/">https://www.freecodecamp.org/news/learn-css-in-this-free-6-hour-video-course/</a></p>
+
+    <hr>
+
+     <h1>Form Validation </h1>
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+     <script>
+        // Displaying alert messages
+        alert("Welcome to Rekonstech!");
+
+        // Modifying HTML elements
+        document.querySelector('h1').textContent = "Welcome to Web Development Internship at Rekonstech";
+        document.querySelector('p').style.color = "red";
+
+        // Logging messages to the console
+        console.log("This is a message logged to the console.");
+
+        // Adding event listener to the links to prevent default behavior
+        var links = document.querySelectorAll('a');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                alert("Link clicked! This link will not navigate.");
+            });
+        });
+
+
+         // Create a new paragraph element
+        var paragraph = document.createElement('p');
+        paragraph.textContent = "This paragraph was dynamically created using JavaScript.";
+
+        // Append the paragraph to the body
+        document.body.appendChild(paragraph);
+
+        // Modify the main heading text content
+        var mainHeading = document.getElementById('mainHeading');
+        mainHeading.textContent = "Dynamic DOM Manipulation Example";
+
+        // Create an unordered list element
+        var unorderedList = document.createElement('ul');
+
+        // Create list items and append them to the unordered list
+        var listItems = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+        listItems.forEach(function(itemText) {
+            var listItem = document.createElement('li');
+            listItem.textContent = itemText;
+            unorderedList.appendChild(listItem);
+        });
+
+        // Append the unordered list to the body
+        document.body.appendChild(unorderedList);
+
+        // Remove the initial paragraph from the body
+        var initialParagraph = document.querySelector('p');
+        document.body.removeChild(initialParagraph);
+        
+
+           function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Check if name is not empty
+            if (name.trim() === '') {
+                alert('Name is required');
+                return false;
+            }
+
+            // Check if email is valid
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Invalid email address');
+                return false;
+            }
+
+            // Check if password meets minimum length requirement
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long');
+                return false;
+            }
+
+            // Validation passed, form can be submitted
+            return true;
+        }
+
+    </script>
+</body>
+</html>
